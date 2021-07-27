@@ -22,13 +22,13 @@ Flutterの環境構築する際に色々と更新などが必要となりまし�
     Homebrewのupdateが必要との事で上記コマンドを実行しましたが、エラー。
 
 ```
-    Error:
+Error:
   homebrew-core is a shallow clone.
 To `brew update`, first run:
   git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core fetch --unshallow
 ```
 	
-#解決方法
+# 解決方法
 メッセージ内の git コマンドを実行します。
 ```
 git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core fetch --unshallow
@@ -43,9 +43,10 @@ ERROR:  While executing gem ... (Gem::FilePermissionError)
     You don't have write permissions for the /usr/bin directory.
 ```
 
-#解決方法
+# 解決方法
 [sudo gem update -n /usr/local/bin bundler]
 パスを変更することでエラーを解決。
 同様に、[sudo gem update cocoapods -n /usr/local/bin bundler]することで、cocoaPodsの更新も完了。
-いよいよ、[flutter doctor]コマンドで、[No issues found!]になりました。
+
+最後、[flutter doctor]コマンドで、無事に[No issues found!]となりました。
 
